@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.AddEventActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:paddingStart="5dp"
+                android:orientation="vertical"
+
+                android:paddingEnd="5dp"
+                android:layout_marginBottom="25dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/titleEventLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Make a schedule of your task"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    />
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/colorPrimary"
+                    android:layout_margin="15dp"
+                    android:id="@+id/progressBar"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/eventNameLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/register_field_height"
+                    android:hint="@string/event_name"
+                    android:textColorHint="@color/hint_color"
+                    app:hintTextColor="@color/hint_color"
+                    app:endIconMode="clear_text"
+                    android:layout_marginTop="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEventTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:backgroundTint="#00FFFFFF"
+                        android:textSize="14sp"
+                        android:drawablePadding="8dp"
+                        android:drawableStart="@drawable/ic_note"
+                        android:textColor="@color/black"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/eventDesLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="@string/event_des"
+                    android:textColorHint="@color/hint_color"
+                    app:hintTextColor="@color/hint_color"
+                    app:endIconMode="clear_text"
+                    android:layout_marginTop="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEventDes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text|textMultiLine"
+                        android:backgroundTint="#00FFFFFF"
+                        android:gravity="top"
+                        android:textSize="14sp"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:scrollbars="vertical"
+                        android:drawablePadding="8dp"
+                        android:textColor="@color/black"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/eventDateLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/register_field_height"
+                            android:hint="@string/enter_date"
+                            android:textColorHint="@color/hint_color"
+                            app:hintTextColor="@color/hint_color"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEventDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:focusable="false"
+                                android:editable="false"
+                                android:imeOptions="actionNext"
+                                android:backgroundTint="#00FFFFFF"
+                                android:textSize="14sp"
+                                android:drawablePadding="8dp"
+                                android:drawableStart="@drawable/calender"
+                                android:textColor="@color/black"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/timeLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/register_field_height"
+                            android:hint="@string/enter_time"
+                            android:textColorHint="@color/hint_color"
+                            app:hintTextColor="@color/hint_color"
+                            app:endIconMode="clear_text"
+                            >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEventTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="time"
+                                android:focusable="false"
+                                android:editable="false"
+                                android:imeOptions="actionNext"
+                                android:backgroundTint="#00FFFFFF"
+                                android:textSize="14sp"
+                                android:drawablePadding="8dp"
+                                android:drawableStart="@drawable/ic_timer"
+                                android:textColor="@color/black"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:id="@+id/bloodLayout"
+                    android:textColorHint="@color/hint_color"
+                    app:hintTextColor="@color/hint_color"
+                    android:layout_height="@dimen/register_field_height"
+                    android:layout_marginTop="16dp"
+                    android:hint="Remind Me">
+                    <AutoCompleteTextView
+                        android:id="@+id/etRemindMeAt"
+                        android:layout_width="match_parent"
+                        android:editable="false"
+                        android:drawablePadding="8dp"
+                        android:textSize="14sp"
+                        android:drawableStart="@drawable/ic_timer"
+                        android:layout_height="wrap_content"
+                        tools:ignore="Deprecated,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:text="Save"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:background="@drawable/gradient"
+                android:textColor="@color/white"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
